@@ -1,0 +1,32 @@
+.contacts{
+	max-width: 70%;
+	margin: 0 auto;
+	padding: 20px 50px;
+}
+.title{
+	font-size: 25px;
+	text-align: center;
+	font-weight: 700;
+	padding: 10px 0 15px 0;
+	background-color: #d4d3d3;
+	border-radius: 5px;
+}
+.list{
+	background-color: #f8f8f8;
+	margin-top: -10px;
+}
+.noContact{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 20px;
+	background-color: white;
+}
+.searchInput{
+	width: 100%;
+	font-size: 16px;
+	margin: 10px 0 20px;
+	border-radius: 5px;
+	padding: 5px;
+	border: 2px rgba(128, 128, 128, 0.568) inset;
+}

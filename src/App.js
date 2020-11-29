@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { observer } from "mobx-react-lite"
+import {useState} from 'react'
+import { useHistory } from "react-router-dom"
 
-function App() {
+import { LoginForm } from "./components/LoginForm"
+import { Contacts }  from "./pages/Contacts"
+import mainStore from './store/mainStore'
+
+
+
+export const  App = observer((props) => {
+
+  const [login, setLogin] = useState({isAuth: false})
+  const [userInfo, setUserInfo] = useState('')
+  const [error, setError] = useState({text: ''})
+
+  const history = useHistory()
+  const users = mainStore.USERS
+
+  const Login = details => {
+    users.find(user => {
+      if(user.email === details.email && user.password === details.password) {
+        setLogin({...login, isAuth: true})
+        setUserInfo(user)
+        history.push(`/user/${user.id}`)
+      } else setError({...error, text: 'Не правильный логин или пароль'})
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {(login.isAuth) ? (<Contacts UserInfo={userInfo}/>) : (<LoginForm Login={Login} Error={error}/>)}
     </div>
   );
-}
-
-export default App;
+})

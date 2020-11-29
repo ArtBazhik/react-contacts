@@ -1,0 +1,78 @@
+.item{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	border-bottom: 1px solid black;
+}
+.groupBtn{
+	display: flex;
+}
+.deleteBtn{
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: tomato;
+	border-radius: 5px;
+	padding: 3px 7px;
+	span{
+		display: block;
+		transform: rotate(45deg);
+	}
+	&:hover{
+		background-color: rgb(250, 68, 36);
+	}
+	&:active{
+		background-color: rgba(250, 68, 36, 0.692);
+	}
+}
+.redactsBtn{
+	color: white;
+	background-color: yellowgreen;
+	font-weight: 700;
+	padding: 4px 6px;
+	margin-left: 15px;
+	border-radius: 5px;
+	&:hover{
+		background-color: rgb(110, 161, 6);
+	}
+	&:active{
+		transform: scale(.96);
+		background-color: rgba(109, 161, 6, 0.548);
+	}
+}
+.cancelRedact{
+	color: white;
+	font-weight: 700;
+	background-color: tomato;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin-right: 15px;
+	&:hover{
+		background-color: rgb(250, 68, 36);
+	}
+	&:active{
+		background-color: rgba(250, 68, 36, 0.692);
+	}
+}
+.saveRedact{
+	color: white;
+	font-weight: 700;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background-color: yellowgreen;
+	&:hover{
+		background-color: rgb(110, 161, 6);
+	}
+	&:active{
+		transform: scale(.96);
+		background-color: rgba(109, 161, 6, 0.548);
+	}
+}
+.redactInput{
+	background-color: inherit;
+	cursor: pointer;
+	&::placeholder{
+		color: black;
+	}
+}

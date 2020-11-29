@@ -1,0 +1,65 @@
+.form{
+	margin-bottom: 50px;
+	.title{
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: .7px;
+		margin-bottom: 20px;
+	}
+}
+.groupForm{
+	position: relative;
+	margin-bottom: 30px;
+	.labelName{
+		position: absolute;
+		top: -10px;
+		left: 0;
+		font-size: 12px;
+		color: gray;
+	}
+	.labelPhone{
+		position: absolute;
+		top: -10px;
+		left: 0;
+		font-size: 12px;
+		color: gray;
+	}
+	.inputName{
+		border-bottom: 1px solid rgba(43, 0, 199, 0.432);
+		padding-top: 4px;
+		width: 300px;
+		&:focus{
+			border-bottom: 1px solid rgba(43, 0, 199, 0.7);
+		}
+		&:focus + .labelName{
+			color: rgba(43, 0, 199, 0.7);
+			font-weight: 700;
+		}
+	}
+	.inputPhone{
+		border-bottom: 1px solid rgba(43, 0, 199, 0.432);
+		padding-top: 4px;
+		width: 300px;
+		&:focus{
+			border-bottom: 1px solid rgba(43, 0, 199, 0.7);
+		}
+		&:focus + .labelPhone{
+			color: rgba(43, 0, 199, 0.7);
+			font-weight: 700;
+		}
+	}
+}
+.createBtn{
+	background-color: yellowgreen;
+	padding: 5px 10px;
+	color: white;
+	font-weight: 700;
+	border-radius: 5px;
+	&:hover{
+		background-color: rgb(110, 161, 6);
+	}
+	&:active{
+		transform: scale(.96);
+		background-color: rgba(109, 161, 6, 0.548);
+	}
+}
